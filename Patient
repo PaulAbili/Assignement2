@@ -1,0 +1,240 @@
+/**
+ * Class: CMSC203 CRN 21575
+ * Program: Assignment #2
+ * Instructor: Gregory Grinberg
+ * Summary of Description: (Give a brief description for each Program)
+ * This is the part of the program which contains information pertaining to each patient 
+ * Due Date: 09/18/2023 
+ * Integrity Pledge: I pledge that I have completed the programming assignment independently.
+ * I have not copied the code from a student or any source.
+ * Student’s Name: Paul Abili
+ */
+public class Patient {
+	private String firstName, middleName, lastName;
+	private String address, city, state, zipCode;
+	private String phoneNumber, emergencyName, emergencyNumber;
+	
+	// No argument constructor which initializes the instance variables with default values
+	public Patient(){
+		firstName = "First Name";
+		middleName = "Middle Name";
+		lastName = "Last Name";
+		address = "address information";
+		city = "city name";
+		state = "state name";
+		zipCode = "00000";
+		phoneNumber = "0000000000";
+		emergencyName = "Emergency Contact Name";
+		emergencyNumber = "000000000";
+	}
+	// A constructor with parameters for the Patient's name information
+	public Patient(String firstName, String middleName, String lastName) {
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName;
+		address = "address information";
+		city = "city name";
+		state = "state name";
+		zipCode = "00000";
+		phoneNumber = "0000000000";
+		emergencyName = "Emergency Contact Name";
+		emergencyNumber = "000000000";
+	}
+	// A constructor with parameters for all instance data
+	public Patient(String firstName, String middleName, String lastName,
+			String address, String city, String state, String zipCode, String phoneNumber, 
+			String emergencyName, String emergencyNumber) {
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName; 
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.zipCode = zipCode;
+		this.phoneNumber = phoneNumber;
+		this.emergencyName = emergencyName;
+		this.emergencyNumber = emergencyNumber;
+	}
+	
+	/*
+	 * A method which returns the first name of the Patient
+	 * @return the first name of the Patient
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+	/*
+	 * A method which returns the middle name of the Patient
+	 * @return the middle name of the Patient
+	 */
+	public String getMiddleName() {
+		return middleName;
+	}
+	/*
+	 * A method which returns the last name of the Patient
+	 * @return the last name of the Patient
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+	/*
+	 * A method which returns the address of the Patient
+	 * @return the address of the Patient
+	 */
+	public String getAddress() {
+		return address;
+	}
+	/*
+	 * A method which returns the city in which the Patient lives
+	 * @return the city in which the Patient lives
+	 */
+	public String getCity() {
+		return city;
+	}
+	/*
+	 * A method which returns the state in which the Patient lives
+	 * @return the state in which the Patient lives
+	 */
+	public String getState() {
+		return state;
+	}
+	/*
+	 * A method which returns the Zip Code of the Patient
+	 * @return the Zip Code of the Patient
+	 */
+	public String getZipCode() {
+		return zipCode;
+	}
+	/*
+	 * A method which returns the Phone Number of the Patient
+	 * @return the Phone Number of the Patient
+	 */
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	/*
+	 * A method which returns the name of the Emergency Contact of the Patient
+	 * @return the name of the Emergency Contact of the Patient
+	 */
+	public String getEmergencyName() {
+		return emergencyName;
+	}
+	/*
+	 * A method which returns the number of the Emergency Contact of the Patient
+	 * @return the number of the Emergency Contact of the Patient
+	 */
+	public String getEmergencyNumber() {
+		return emergencyNumber;
+	}
+	
+	/*
+	 * A method which sets the first name of the Patient
+	 * @param the first name of the Patient
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	/*
+	 * A method which sets the middle name of the Patient
+	 * @param the middle name of the Patient
+	 */
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
+	}
+	/*
+	 * A method which sets the last name of the Patient
+	 * @param the last name of the Patient
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	/*
+	 * A method which sets the address of the Patient
+	 * @param the address of the Patient
+	 */
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	/*
+	 * A method which sets the city in which the Patient lives
+	 * @param the city in which the Patient lives
+	 */
+	public void setCity(String city) {
+		this.city = city;
+	}
+	/*
+	 * A method which sets the state in which the Patient lives
+	 * @param the state in which the Patient lives
+	 */
+	public void setState(String state) {
+		this.state = state;
+	}
+	/*
+	 * A method which sets the Zip Code of the Patient
+	 * @param the Zip Code of the Patient
+	 */
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
+	}
+	/*
+	 * A method which sets the Phone Number of the Patient
+	 * @param the Phone Number of the Patient
+	 */
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	/*
+	 * A method which sets the name of the Emergency Contact of the Patient
+	 * @param the name of the Emergency Contact of the Patient
+	 */
+	public void setEmergencyName(String emergencyName) {
+		this.emergencyName = emergencyName;
+	}
+	/*
+	 * A method which sets the number of the Emergency Contact of the Patient
+	 * @param the number of the Emergency Contact of the Patient
+	 */
+	public void setEmergencyNumber(String emergencyNumber) {
+		this.emergencyNumber = emergencyNumber;
+	}
+	/*
+	 * A method which concatenates all the name instance variables through  get methods
+	 * @return the fullName of the Patient 
+	 */
+	public String buildFullName() {
+		String fullName = getFirstName();
+		fullName = fullName + " " + getMiddleName();
+		fullName = fullName + " " + getLastName();
+		return fullName;
+	}
+	/*
+	 * A method which concatenates all the parts of the address instance variables through get methods
+	 * @return the fullAddress of the Patient 
+	 */
+	public String buildAddress(){
+		String fullAddress = getAddress();
+		fullAddress = fullAddress + " " + getCity();
+		fullAddress = fullAddress + " " + getState();
+		fullAddress = fullAddress + " " + getZipCode();
+		return fullAddress;
+ 	}
+	/*
+	 * A method which concatenates the name and the phone number of the emergency contact through get methods
+	 * @return the Emergency Contact Information 
+	 */
+	public String buildEmergencyContact() {
+		String emergencyContact = getEmergencyName();
+		emergencyContact = emergencyContact + " " + getEmergencyNumber();
+		return emergencyContact;
+	}
+	/*
+	 * A method which displays all the Important Patient Information 
+	 * @return the information of the patient formatted
+	 */
+	public String toString() {
+		String patientInfo = "Patient info: \n" + " Name: " 
+	+ buildFullName() + "\n Address: " + buildAddress() +
+	"\n EmergencyContact: " + buildEmergencyContact() + "\n";   
+		return patientInfo;
+	}
+}

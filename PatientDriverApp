@@ -1,0 +1,69 @@
+/**
+ * Class: CMSC203 CRN 21575
+ * Program: Assignment #2
+ * Instructor: Gregory Grinberg
+ * Summary of Description: (Give a brief description for each Program)
+ * This is the part of the program which helps to display all the infomation pertaining to both classes
+ * Due Date: 09/18/2023 
+ * Integrity Pledge: I pledge that I have completed the programming assignment independently.
+ * I have not copied the code from a student or any source.
+ * Student’s Name: Paul Abili
+ */
+public class PatientDriverApp {
+	// Main class of the project
+	
+	public static void main(String[] args) {
+		Patient currnentPatinet = new Patient("Jenny", "Elaine", "Santori", 
+				"123 Main Street", "MyTown", "CA", "01234","012345678", 
+				"Bill Sanntori", "777-555-1212");
+		Procedure Procedure1 = new Procedure("Physical Exam", "7/20/2019","Dr. Irvine", 3250.0);
+		Procedure Procedure2 = new Procedure("X-ray", "7/20/2019","Dr. Jamison", 5500.43);
+		Procedure Procedure3 = new Procedure("Blood Test", "7/20/2019","Dr. Smith", 1400.75);
+			
+		displayPatient(currnentPatinet);
+		displayProcedure(Procedure1);
+		displayProcedure(Procedure2);
+		displayProcedure(Procedure3);
+		
+		System.out.printf("Total Charges: $%,.2f\n",calculateTotalCharges(Procedure1, Procedure2, Procedure3));
+
+		System.out.println();
+		
+		System.out.println("Student Name: Julie Taylor");
+		System.out.println("MC#: MC7777777");
+		System.out.println("Due Date: 06/12/2023");
+	}
+	
+	
+	
+	
+	/**
+	 * Displays the information about the patient 
+	 * @param the Patient which the information should be based on  
+	 */
+	public static void displayPatient(Patient myPatient) {
+		System.out.println(myPatient.toString());
+	}
+	/**
+	 * Displays the information about the procedure 
+	 * @param the Procedure which the information should be based on  
+	 */
+	public static void displayProcedure(Procedure procedureName) {
+		System.out.println(procedureName.toString());
+	}
+	/**
+	 * Returns the sum of the 3 procedures
+	 * @param The first Procedure
+	 * @param The second Procedure
+	 * @param The last Procedure
+	 * @return Returns the result of the sum
+	 */
+	public static double calculateTotalCharges(Procedure Proc1, Procedure Proc2, Procedure Proc3) {
+		double total = Proc1.getProcedureCharge();
+		total += Proc2.getProcedureCharge();
+		total += Proc3.getProcedureCharge();
+		return total;
+	}
+
+	
+}

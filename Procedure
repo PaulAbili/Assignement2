@@ -1,0 +1,108 @@
+/**
+ * Class: CMSC203 CRN 21575
+ * Program: Assignment #2
+ * Instructor: Gregory Grinberg
+ * Summary of Description: (Give a brief description for each Program):
+ * This is the part of the program which contains the information related to each procedure
+ * Due Date: 09/18/2023 
+ * Integrity Pledge: I pledge that I have completed the programming assignment independently.
+ * I have not copied the code from a student or any source.
+ * Student’s Name: Paul Abili
+ */
+
+public class Procedure {
+
+	private String name, date, practitoner;
+	private double charge;
+	
+	// Constructor with no parameters, values set to placeholder values
+	public Procedure() {
+		name = "Procedure Name";
+		date = "0/00/00";
+		practitoner = "Dr. Last Name";
+		charge = 0;
+		
+	}
+	// Constructor with parameters for the name and date, remaining values set to placeholder values
+	public Procedure(String name, String date) {
+		this.name = name;
+		this.date = date;
+		practitoner = "Dr. Last Name";
+		charge = 0;
+	}
+	// Constructor with parameters for all instance data
+	public Procedure(String name, String date, 
+			String practitoner, double charge) {
+		this.name = name;
+		this.date = date;
+		this.practitoner = practitoner;
+		this.charge = charge;
+	}
+	/*
+	 * A method which returns the name of the Procedure 
+	 * @return the name of the Procedure
+	 */
+	public String getProcedureName() {
+		return name;
+	}
+	/*
+	 * A method which returns the date of the Procedure
+	 * @return the date of the Procedure
+	 */
+	public String getProcedureDate() {
+		return date;
+	}
+	/*
+	 * A method returns the name of the Practitioner
+	 * @return the name of the Practitioner
+	 */
+	public String getPractitionerName() {
+		return practitoner;
+	}
+	/*
+	 * A method which returns the charge for the Procedure
+	 * @return the charge for the Procedure
+	 */
+	public double getProcedureCharge() {
+		return charge;
+	}
+	
+	/*
+	 * A method which sets the name of the Procedure
+	 * @param the name of the Procedure
+	 */
+	public void setProcedureName(String name) {
+		this.name = name;
+	}
+	/*
+	 * A method which sets the date of the Procedure
+	 * @param the date of the Procedure
+	 */
+	public void setProcedureDate(String date) {
+		this.date = date;
+	}
+	/*
+	 * A method which sets the name of the Practitioner
+	 * @param the name of the Practitioner
+	 */
+	public void setPractitionerName(String practitoner) {
+		this.practitoner = practitoner;
+	}	
+	/*
+	 * A method which sets the charge of the Procedure 
+	 * @param the charge of the Procedure
+	 */
+	public void setProcedureCharge(double charge) {
+		 this.charge = charge;
+	}
+	/*
+	 * A method which returns all the information about the Procedure, formatted 
+	 * @return the information about the Procedure formatted
+	 */
+	public String toString() {
+		String procedureInfo = "	Procedure: " + name + "\n	ProcedureDate="
+	+ date + "\n	Practitioner=" + practitoner + "\n	Charge=" + charge + "\n";
+		return procedureInfo;
+	}
+	
+}
